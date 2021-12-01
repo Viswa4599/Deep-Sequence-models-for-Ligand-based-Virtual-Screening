@@ -221,7 +221,6 @@ class SmilesEnumerator(object):
 
                         print(c)
                         raise KeyboardInterrupt
-#                    one_hot[i,j,self._char_to_int[c]] = 1
             return one_hot
 
       

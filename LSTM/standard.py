@@ -134,9 +134,6 @@ for file_path in files_list:
     checkpoint = ModelCheckpoint(filepath, monitor='val_precision', verbose=1, save_best_only=True, mode='max',save_weights_only = True)
     fnmodel.fit_generator(generator, steps_per_epoch=100, epochs=100,callbacks = [reduce_lr])
     
-    #model.save('./model_saves/attention_lstm' + file_path.split("/")[-1])
-    #fnmodel.load_weights("attention_lstm_weights.best.hdf5")
-    #fnmodel.compile(loss="binary_crossentropy", optimizer='adam',metrics = [AUC(), Precision(), Recall()])
     print("Created model and loaded weights from file")
 
     precisions = []

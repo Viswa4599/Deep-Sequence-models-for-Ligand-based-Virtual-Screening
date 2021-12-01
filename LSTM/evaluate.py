@@ -57,19 +57,3 @@ print(np.median(recalls))
 print(np.median(f1))
 print(np.median(roc))
 print(np.median(accuracies))
-'''
-trans_X_test = sme.transform(X_test)
-predictions = model.predict_classes(trans_X_test)
-predictions = predictions[0]
-precisions.append(precision_score(y_test,predictions))
-recalls.append(recall_score(y_test,predictions))
-f1.append(f1_score(y_test,predictions))
-roc.append(roc_auc_score(y_test,predictions))
-accuracies.append(accuracy_score(y_test,predictions))
-
-print(precisions[0])
-print(recalls[0])
-print(f1[0])
-print(roc[0])
-print(accuracies[0])
-'''
